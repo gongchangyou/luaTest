@@ -15,7 +15,8 @@ public class LuaScriptsFromFile : MonoBehaviour {
 	}
 
 	void Awake(){
-		/* test
+//		A.instance.baseMethod();
+		/*test
 		A a = new A ();
 		a.test ();
 		B b = new B ();

@@ -11,8 +11,10 @@ using System;
 using UnityEngine;
 	public class A:B
 	{
+	public static A instance = new A ();
+	
 	public int  age;
-		public A ()
+		private A ()
 		{
 		 age = 10;
 			Debug.Log ("A=" + this);

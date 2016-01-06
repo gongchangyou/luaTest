@@ -10,7 +10,7 @@
 using System;
 using UnityEngine;
 
-	public class B
+	public class B:Singleton<B>
 	{
 		public B ()
 		{
@@ -24,6 +24,10 @@ using UnityEngine;
 	static public System.Action<A> ChangeA = (A a) => {
 		a.age = 25;
 	};
+	public void baseMethod(){
+		Debug.Log ("B base method");
+
+	}
 //
 //	static public void  changeA(A a){
 //		a.age = 20;
