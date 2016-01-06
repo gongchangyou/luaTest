@@ -1,17 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Lua\LuaScriptsFromFile.cs">
     <Files>
-      <File FileName="Assets\Lua\LuaScriptsFromFile.cs" Line="24" Column="30" />
+      <File FileName="luaTest.sln" Line="46" Column="10" />
+      <File FileName="Assets\Lua\LuaScriptsFromFile.cs" Line="41" Column="74" />
       <File FileName="Assets\uLua\Core\Lua.cs" Line="1" Column="1" />
       <File FileName="Assets\uLua\Core\LuaDLL.cs" Line="1" Column="1" />
+      <File FileName="Assets\uLua\Examples\02_CreateGameObject\CreateGameObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\uLua\Examples\03_AccessingLuaVariables\AccessingLuaVariables.cs" Line="1" Column="1" />
+      <File FileName="Assets\uLua\Core\LuaTable.cs" Line="1" Column="1" />
+      <File FileName="Assets\uLua\Examples\04_ScriptsFromFile\ScriptsFromFile.cs" Line="16" Column="18" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
-          <Value>accessories.count</Value>
-          <Value>unit.uaId</Value>
-          <Value>item.Accessory.uaId</Value>
+          <Value>www.bytes</Value>
+          <Value>tempPath</Value>
+          <Value>filePath</Value>
           <Value>m_DeckIconList.Count</Value>
           <Value>unit.uaId</Value>
           <Value>m_Unit.ueId</Value>
@@ -24,7 +29,12 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\luaTest\Assets\Lua\LuaScriptsFromFile.cs" line="41" />
+      <Breakpoint file="D:\luaTest\Assets\Lua\LuaScriptsFromFile.cs" line="65" />
+      <Breakpoint file="D:\luaTest\Assets\Lua\LuaScriptsFromFile.cs" line="66" />
+      <Breakpoint file="D:\luaTest\Assets\Lua\LuaScriptsFromFile.cs" line="39" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

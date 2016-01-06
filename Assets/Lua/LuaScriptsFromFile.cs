@@ -4,15 +4,23 @@ using LuaInterface;
 using System.IO;
 public class LuaScriptsFromFile : MonoBehaviour {
 	private string luaFileName = "lua.unity3d";
-	public static string luaAssetsPath = Application.temporaryCachePath + "/LuaAssets/";
+	public string luaAssetsPath;
+	private string filePath;
     //public TextAsset scriptFile;
 
 	// Use this for initialization
 	void Start () {
-		string filePath = Path.Combine (luaAssetsPath, luaFileName);
+		Debug.Log ("start");
+
+	}
+
+	void Awake(){
+		luaAssetsPath = Application.temporaryCachePath + "/LuaAssets/";
+		filePath = Path.Combine (luaAssetsPath, luaFileName);
+		Debug.Log ("awake");
+
 		System.Action<AssetBundle> onComplete = (AssetBundle luaAsset) => {
 			//TextAsset scriptText = obj.Load ("04_ScriptsFromFile.lua.txt") as TextAsset;
-			Debug.LogError ("luaState: " + (3 == 4));
 			LuaState l = new LuaState();
 			
 			TextAsset luaText = luaAsset.Load("04_ScriptsFromFile") as TextAsset;
@@ -23,18 +31,22 @@ public class LuaScriptsFromFile : MonoBehaviour {
 			if(luaText1 != null)
 			l.DoString(luaText1.text);
 		};
-
+		
 		string path = "";
+		bool isReplace = false;
+		#if Local_Lua
 		filePath = Application.streamingAssetsPath + "/LuaAssets/" + luaFileName;
+		#endif
 		if (File.Exists (filePath)) {
 			path = "file://" + filePath;
 		} else {
-			path = "http://dev01.wcat.gumichina.com/" + filePath;
+			path = "http://gongchangyou-download.stor.sinaapp.com/" + luaFileName;
+			isReplace = true;
 		}
-		StartCoroutine (AsyncScript (path, onComplete));
+		StartCoroutine (AsyncScript (path, isReplace, onComplete));
 	}
 
-	public IEnumerator AsyncScript (string path, System.Action<AssetBundle> onComplete) {
+	public IEnumerator AsyncScript (string path, bool isReplace, System.Action<AssetBundle> onComplete) {
 
 		Debug.LogError ("path: " + path);
 		WWW www = new WWW (path);
@@ -44,7 +56,21 @@ public class LuaScriptsFromFile : MonoBehaviour {
 
 		if (!string.IsNullOrEmpty (www.error)) {
 			Debug.LogError ("error: " + www.error);
-			yield return null;   
+			yield break;   
+		}
+
+		//save assetBundle TODO
+		if (!Directory.Exists (luaAssetsPath)) {
+			Directory.CreateDirectory(luaAssetsPath);
+		}
+		if (isReplace) {
+			string tempPath = Path.Combine (luaAssetsPath, System.Convert.ToString (Time.time * 1000));
+
+			File.WriteAllBytes (tempPath, www.bytes);
+			if (File.Exists (filePath)) {
+				File.Delete (filePath);
+			}
+			File.Move (tempPath, filePath);
 		}
 
 		Debug.LogError (www.assetBundle);

@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Lua\DEFINE_TOOL.cs" />
      <Compile Include="Assets\Lua\LuaScriptsFromFile.cs" />
      <Compile Include="Assets\uLua\Core\CheckType.cs" />
      <Compile Include="Assets\uLua\Core\GenerateEventAssembly.cs" />

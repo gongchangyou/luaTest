@@ -32,7 +32,8 @@ public class AssetBundleTool
 			}	
 		}
 
-		var exportPath = Path.Combine( LuaScriptsFromFile.luaAssetsPath, "lua.unity3d");
+		var filePath = Application.streamingAssetsPath + "/LuaAssets/";
+		var exportPath = Path.Combine( filePath, "lua.unity3d");
 		
 		BuildPipeline.PushAssetDependencies();
 		BuildPipeline.BuildAssetBundleExplicitAssetNames(assetObjs.ToArray(), explicitAssetNames.ToArray(), exportPath,
