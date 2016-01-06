@@ -15,8 +15,22 @@ public class LuaScriptsFromFile : MonoBehaviour {
 	}
 
 	void Awake(){
+		/* test
+		A a = new A ();
+		a.test ();
+		B b = new B ();
+		B.ChangeA += (A tmp)=> {
+			tmp.age += 30;
+		};
+		B.ChangeA += (A tmp)=> {
+			tmp.age += 60;
+		};
+		B.ChangeA (a);
+		Debug.Log (a.age);
+		*/
 		luaAssetsPath = Application.temporaryCachePath + "/LuaAssets/";
 		filePath = Path.Combine (luaAssetsPath, luaFileName);
+		filePath = filePath.Replace ("/", System.IO.Path.DirectorySeparatorChar.ToString());
 		Debug.Log ("awake");
 
 		System.Action<AssetBundle> onComplete = (AssetBundle luaAsset) => {
@@ -53,8 +67,8 @@ public class LuaScriptsFromFile : MonoBehaviour {
 
 		while (!www.isDone)
 			yield return new WaitForEndOfFrame ();
-
 		if (!string.IsNullOrEmpty (www.error)) {
+			Debug.LogError ("error: " + www.url);
 			Debug.LogError ("error: " + www.error);
 			yield break;   
 		}
