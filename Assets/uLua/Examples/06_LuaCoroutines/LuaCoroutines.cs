@@ -20,9 +20,10 @@ public class LuaCoroutines : MonoBehaviour {
 
             function fib(n)
                 local a, b = 0, 1
-                while n > 0 do
+				local tmp = n
+                while tmp > 0 do
                     a, b = b, a + b
-                    n = n - 1
+                    tmp = tmp - 1
                 end
 
                 return a
