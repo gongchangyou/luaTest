@@ -1,19 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Lua\LuaScriptsFromFile.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Lua\A.cs">
     <Files>
-      <File FileName="luaTest.sln" Line="1" Column="1" />
-      <File FileName="Assets\Lua\LuaScriptsFromFile.cs" Line="45" Column="23" />
-      <File FileName="Assets\uLua\Core\Lua.cs" Line="1" Column="1" />
-      <File FileName="Assets\uLua\Core\LuaDLL.cs" Line="1" Column="1" />
-      <File FileName="Assets\uLua\Examples\02_CreateGameObject\CreateGameObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\uLua\Examples\03_AccessingLuaVariables\AccessingLuaVariables.cs" Line="1" Column="1" />
-      <File FileName="Assets\uLua\Core\LuaTable.cs" Line="1" Column="1" />
-      <File FileName="Assets\uLua\Examples\04_ScriptsFromFile\ScriptsFromFile.cs" Line="1" Column="1" />
-      <File FileName="Assets\Editor\AssetBundleTool.cs" Line="1" Column="1" />
-      <File FileName="Assets\Lua\A.cs" Line="22" Column="13" />
-      <File FileName="Assets\Lua\DEFINE_TOOL.cs" Line="1" Column="1" />
-      <File FileName="Assets\Lua\B.cs" Line="29" Column="16" />
+      <File FileName="luaTest.sln" Line="46" Column="10" />
+      <File FileName="Assets\Lua\LuaScriptsFromFile.cs" Line="1" Column="1" />
+      <File FileName="Assets\uLua\Examples\05_CallLuaFunction\CallLuaFunction.cs" Line="19" Column="28" />
+      <File FileName="Assets\Lua\A.cs" Line="21" Column="4" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">

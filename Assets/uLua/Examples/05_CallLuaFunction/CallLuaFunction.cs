@@ -13,6 +13,20 @@ public class CallLuaFunction : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		A a1 = new A ();
+		a1.age = 5;
+		A a2 = new A ();
+		a2 = a1;
+		a2.age = 15;
+		Debug.Log ("a1.age=" + a1.age);
+
+		int x = new int ();
+		x = 3;
+		int y = new int ();
+		y = x;
+		y = 4;
+		Debug.Log ("x=" + x);
+
         LuaState l = new LuaState();
 
         // First run the script so the function is created
@@ -26,6 +40,7 @@ public class CallLuaFunction : MonoBehaviour {
 
         // Lua functions can have variable returns, so we again store those as a C# object array, and in this case print the first one
         print(r[0]);
+//		SendMessage ("test");
 	}
 	
 	// Update is called once per frame
