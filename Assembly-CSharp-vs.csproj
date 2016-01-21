@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DiceGame.cs" />
      <Compile Include="Assets\Lua\A.cs" />
      <Compile Include="Assets\Lua\B.cs" />
      <Compile Include="Assets\Lua\DEFINE_TOOL.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\uLua\Examples\04_ScriptsFromFile\ScriptsFromFile.cs" />
      <Compile Include="Assets\uLua\Examples\05_CallLuaFunction\CallLuaFunction.cs" />
      <Compile Include="Assets\uLua\Examples\06_LuaCoroutines\LuaCoroutines.cs" />
+     <Compile Include="Assets\uLua\Examples\PlayerTankController.cs" />
      <None Include="Assets\StreamingAssets\041_ScriptsFromFile.lua.txt" />
      <None Include="Assets\uLua\Source\README.txt" />
      <None Include="Assets\uLua\README.txt" />

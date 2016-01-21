@@ -13,6 +13,8 @@ public class CallLuaFunction : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//test
+		/*
 		A a1 = new A ();
 		a1.age = 5;
 		A a2 = new A ();
@@ -26,7 +28,9 @@ public class CallLuaFunction : MonoBehaviour {
 		y = x;
 		y = 4;
 		Debug.Log ("x=" + x);
-
+		Debug.Log( string.Format ("_DECk {0:F2} {0:F2}", 1243.234f,345.234f));
+		Debug.Log( string.Format ("{0:D2}", 1));
+		*/
         LuaState l = new LuaState();
 
         // First run the script so the function is created
@@ -38,13 +42,16 @@ public class CallLuaFunction : MonoBehaviour {
         // Call it, takes a variable number of object parameters and attempts to interpet them appropriately
         object[] r = f.Call("I called a lua function!");
 
-        // Lua functions can have variable returns, so we again store those as a C# object array, and in this case print the first one
+        // Lua functions can have variable returns, so we again store those as a C# object array, and in this case prinSt the first one
         print(r[0]);
 //		SendMessage ("test");
+
+
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 }
