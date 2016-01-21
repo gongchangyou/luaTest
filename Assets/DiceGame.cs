@@ -22,7 +22,9 @@ public class DiceGame : MonoBehaviour {
 		if (GUI.Button (new Rect (100, 50, 50, 30), "Play")) {
 			Debug.Log ("Throwing dice...");
 			Debug.Log ("Finding random between 1 to 6...");
-			int diceResult = Random.Range(1,7);
+//			int diceResult = Random.Range(1,7);
+			int diceResult = throwLoadedDice();
+
 			Debug.Log ("Result: " + diceResult);
 			if(diceResult == int.Parse(inputValue)){
 				guiText.text = "Dice RESULT: " + diceResult.ToString() + " YOU WIN!";
@@ -31,6 +33,16 @@ public class DiceGame : MonoBehaviour {
 				guiText.text = "Dice RESULT: " + diceResult.ToString() + "\r\n YOU LOSE!";
 
 			}
+		}
+
+	}
+
+	int throwLoadedDice(){
+		int randomProbability = Random.Range (1, 101);
+		if (randomProbability < 36) {
+			return 6;
+		} else {
+			return Random.Range (1, 6);
 		}
 
 	}
