@@ -31,30 +31,31 @@ public class UnityFlock : MonoBehaviour {
 	void Start () {
 		randomFreq = 1.0f / randomFreq;
 
-		origin = transform.parent;
+
 
 		transformComponent = transform;
 
-		UnityFlock[] tempFlocks = null;
 
+		//why set parent = null??
+		transform.parent = null;
+
+		StartCoroutine (UpdateRandom ());
+	}
+	void Awake(){
+		origin = transform.parent;
+		UnityFlock[] tempFlocks = null;
+		
 		if (origin) {
 			tempFlocks = origin.GetComponentsInChildren<UnityFlock>();
 		}
 		Debug.Log ("tempFlocks=" + tempFlocks.Length + "name=" + name);
 		objects = new Transform[tempFlocks.Length];
 		otherFlocks = new UnityFlock[tempFlocks.Length];
-
+		
 		for (int i = 0; i<tempFlocks.Length; i++) {
 			objects[i] = tempFlocks[i].transform;
 			otherFlocks[i] = tempFlocks[i];
 		}
-
-		//why set parent = null??
-//		transform.parent = null;
-
-		StartCoroutine (UpdateRandom ());
-	}
-	void Awake(){
 
 
 	}
@@ -66,15 +67,20 @@ public class UnityFlock : MonoBehaviour {
 
 	}
 
-	Vector3 test = new Vector3(0,1,0);
+	Vector3 start = new Vector3(0,2,0);
+	Vector3 test = new Vector3(0,2,0);
+	float theta;
 	// Update is called once per frame
 	void Update () {
+		theta += Time.deltaTime;
 		//Slerp 是如何确定球的半径的？
-//		test = Vector3.Slerp (test, new Vector3(2,0,2), Time.deltaTime);
+//		test = Vector3.Slerp (test, new Vector3(1,0,0), Time.deltaTime);
+//
 //		Debug.DrawLine (new Vector3 (0, 0, 0), test, Color.red);
-//		Debug.Log ("test=" + test);
-		//========================
-
+//
+//
+//		Debug.Log ("test=" + test );//.x + " y=" + test.y + " z=" + test.z);
+//		========================
 		Vector3 avgVelocity = Vector3.zero;
 		Vector3 avgPosition = Vector3.zero;
 
@@ -85,7 +91,7 @@ public class UnityFlock : MonoBehaviour {
 		Vector3 forceV;
 		Vector3 toAvg;
 		Vector3 wantedVel;
-		Debug.Log ("objects=" + objects.Length);
+//		Debug.Log ("objects=" + objects.Length);
 
 		for (int i=0; i<objects.Length; i++) {
 			Transform transform = objects[i];

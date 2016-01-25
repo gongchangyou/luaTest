@@ -54,6 +54,7 @@
      <Compile Include="Assets\Lua\Singleton.cs" />
      <Compile Include="Assets\SlotMachine.cs" />
      <Compile Include="Assets\UnityFlock.cs" />
+     <Compile Include="Assets\UnityFlockController.cs" />
      <Compile Include="Assets\uLua\Core\CheckType.cs" />
      <Compile Include="Assets\uLua\Core\GenerateEventAssembly.cs" />
      <Compile Include="Assets\uLua\Core\Lua.cs" />

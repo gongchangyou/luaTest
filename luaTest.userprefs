@@ -1,9 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\shaders\AreaFan.shader">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UnityFlock.cs">
     <Files>
-      <File FileName="Assets\DiceGame.cs" Line="21" Column="4" />
+      <File FileName="Assets\DiceGame.cs" Line="25" Column="3" />
       <File FileName="Assets\Resources\shaders\AreaFan.shader" Line="50" Column="7" />
+      <File FileName="Assets\UnityFlock.cs" Line="141" Column="5" />
+      <File FileName="Assets\SlotMachine.cs" Line="16" Column="17" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
