@@ -50,6 +50,7 @@
      <None Include="Assets\StreamingAssets\041_ScriptsFromFile.lua.txt" />
      <None Include="Assets\uLua\Source\README.txt" />
      <None Include="Assets\uLua\README.txt" />
+     <None Include="Assets\Resources\shaders\AreaFan.shader" />
      <None Include="Assets\uLua\Examples\04_ScriptsFromFile\04_ScriptsFromFile.lua.txt" />
      <None Include="Assets\StreamingAssets\04_ScriptsFromFile.lua.txt" />
  <Reference Include="UnityEngine.UI">
