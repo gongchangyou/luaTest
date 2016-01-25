@@ -83,7 +83,7 @@ public class UnityFlock : MonoBehaviour {
 //		========================
 		Vector3 avgVelocity = Vector3.zero;
 		Vector3 avgPosition = Vector3.zero;
-
+		float speed = velocity.magnitude;
 		float count = 0;
 		float f = 0.0f;
 		float d = 0.0f;
@@ -94,8 +94,8 @@ public class UnityFlock : MonoBehaviour {
 //		Debug.Log ("objects=" + objects.Length);
 
 		for (int i=0; i<objects.Length; i++) {
-			Transform transform = objects[i];
-			if(transform != transformComponent){
+			Transform transform = objects [i];
+			if (transform != transformComponent) {
 				Vector3 otherPosition = transform.position;
 				avgPosition += otherPosition;
 				count ++;
@@ -103,19 +103,20 @@ public class UnityFlock : MonoBehaviour {
 				forceV = myPosition - otherPosition;
 				d = forceV.magnitude;
 
-				if(d < followRadius){
-					if(d < avoidanceRadius){
+				if (d < followRadius) {
+					if (d < avoidanceRadius) {
 						f = 1.0f - (d / avoidanceRadius);//判断靠近程度 f越小表示距离越远
-						if(d>0)
+						if (d > 0)
 							avgVelocity += forceV.normalized * f * avoidanceForce;//距离越近弹开的越快
 					}
 
 					//计算出靠太近的大伙的平均速度
 					f = d / followRadius;
-					var otherSealgull = otherFlocks[i];
+					var otherSealgull = otherFlocks [i];
 					avgVelocity += otherSealgull.normalizedVelocity * f * followVelocity;//近的权重高些 远的权重低
 				}
-
+			}
+		}
 				if(count > 0){
 					avgVelocity /= count;
 					toAvg = avgPosition / count - myPosition;//目标位置
@@ -128,7 +129,7 @@ public class UnityFlock : MonoBehaviour {
 				f = d / toOriginRange;
 				if(d > 0)
 					originPush = forceV.normalized * f * toOriginForce;
-				float speed = velocity.magnitude;
+				
 				if(speed < minSpeed && speed > 0){
 //					Debug.Log ("name = " + name + "velocity =" + velocity + " speed=" + speed + " minSpeed=" + minSpeed);
 					velocity = velocity / speed * minSpeed;//将速度拉至最小速度
@@ -152,7 +153,7 @@ public class UnityFlock : MonoBehaviour {
 				transformComponent.rotation = Quaternion.LookRotation(velocity);
 				transformComponent.Translate(velocity * Time.deltaTime, Space.World);
 				normalizedVelocity = velocity.normalized;
-			}
-		}
+			
+
 	}
 }

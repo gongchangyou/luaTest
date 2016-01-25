@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\DiceGame.cs" />
+     <Compile Include="Assets\Flock.cs" />
+     <Compile Include="Assets\FlockController.cs" />
      <Compile Include="Assets\Lua\A.cs" />
      <Compile Include="Assets\Lua\B.cs" />
      <Compile Include="Assets\Lua\DEFINE_TOOL.cs" />

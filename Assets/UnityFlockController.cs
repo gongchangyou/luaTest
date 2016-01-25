@@ -18,8 +18,8 @@ public class UnityFlockController : MonoBehaviour {
 	void Update () {
 
 		transform.Translate (Vector3.forward * speed * Time.deltaTime);
-		Debug.Log ("nextMovementPoint " + nextMovementPoint);
-		Debug.DrawLine (Vector3.zero, nextMovementPoint);
+//		Debug.Log ("nextMovementPoint " + nextMovementPoint);
+
 		transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (nextMovementPoint - transform.position), Time.deltaTime);//以上两行可以
 	
 		if (Vector3.Distance (nextMovementPoint, transform.position) <= 100.0f) {
@@ -28,7 +28,7 @@ public class UnityFlockController : MonoBehaviour {
 	}
 
 	void CalculateNextMovement(){
-
+		Debug.DrawLine (Vector3.zero, nextMovementPoint);
 		float posX = Random.Range (initialPosition.x - bound.x, initialPosition.x + bound.x);
 		float posY = Random.Range (initialPosition.y - bound.y, initialPosition.y + bound.y);
 		float posZ = Random.Range (initialPosition.z - bound.z, initialPosition.z + bound.z);
