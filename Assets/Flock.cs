@@ -14,22 +14,22 @@ public class Flock : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (controller) {
-			Vector3 relativePos = steer () * Time.deltaTime;
+			Vector3 relativePos = steer ();// * Time.deltaTime;
 			if(relativePos != Vector3.zero){
-				rigidbody.velocity = relativePos;
+				rigidbody.velocity = Vector3.Slerp (rigidbody.velocity, relativePos, Time.deltaTime);
 		
 			}else{
 				Debug.Log("velocity=0");
 			}
 
 			var velocity = rigidbody.velocity;
-			float speed = rigidbody.velocity.magnitude;
-			if(speed > controller.maxVelocity){
-				rigidbody.velocity = rigidbody.velocity.normalized * controller.maxVelocity;
-			}else if(speed < controller.minVelocity){
-				rigidbody.velocity = rigidbody.velocity.normalized * controller.minVelocity;
-
-			}
+//			float speed = rigidbody.velocity.magnitude;
+//			if(speed > controller.maxVelocity){
+//				rigidbody.velocity = rigidbody.velocity.normalized * controller.maxVelocity;
+//			}else if(speed < controller.minVelocity){
+//				rigidbody.velocity = rigidbody.velocity.normalized * controller.minVelocity;
+//
+//			}
 
 		}
 	} 
@@ -39,27 +39,27 @@ public class Flock : MonoBehaviour {
 	public float avoidanceForce = 5.0f;
 	public float followVelocity = 4.0f;
 	private Vector3 steer(){
-		Vector3 center = controller.flockCenter - transform.localPosition;
+		Vector3 center = controller.flockCenter - transform.position;
 
 		Vector3 velocity = controller.flockVelocity - rigidbody.velocity;
 
-		Vector3 follow = controller.target.localPosition - transform.localPosition;
+		Vector3 follow = controller.target.position - transform.position;
 
 		Vector3 separation = Vector3.zero;
 		float f = 0.0f;
 		float d = 0.0f;
 		foreach (Flock flock in controller.flockList) {
 			if(flock != this){
-				Vector3 relativePos = transform.localPosition - flock.transform.localPosition;
+				Vector3 relativePos = transform.position - flock.transform.position;
 
 				separation += relativePos / relativePos.sqrMagnitude;
 
 
 			}
 		}
-		Vector3 randomize = new Vector3( (Random.value * 2) - 1 , (Random.value * 2) - 1, (Random.value * 2) - 1);
+		Vector3 randomize = new Vector3( Random.Range (-3f, 3f), Random.Range (-3f, 3f), Random.Range (-3f, 3f));
 
-		randomize.Normalize ();
+		//randomize.Normalize ();
 //		Debug.Log ("center = " + center);
 //		Debug.Log ("velocity = " + velocity);
 //		Debug.Log ("follow = " + follow);

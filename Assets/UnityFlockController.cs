@@ -4,7 +4,7 @@ using System.Collections;
 public class UnityFlockController : MonoBehaviour {
 	public Vector3 offset;
 	public Vector3 bound;
-	public float speed = 100.0f;
+	public float speed = 2.0f;
 
 	private Vector3 initialPosition;
 	private Vector3 nextMovementPoint;
