@@ -1,14 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Flock.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\VehicleAvoidance.cs">
     <Files>
-      <File FileName="Assets\FlockController.cs" Line="23" Column="32" />
+      <File FileName="Assets\FlockController.cs" Line="39" Column="41" />
       <File FileName="Assets\DiceGame.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\shaders\AreaFan.shader" Line="1" Column="1" />
       <File FileName="Assets\UnityFlock.cs" Line="1" Column="1" />
       <File FileName="Assets\SlotMachine.cs" Line="1" Column="1" />
-      <File FileName="Assets\UnityFlockController.cs" Line="14" Column="28" />
-      <File FileName="Assets\Flock.cs" Line="55" Column="55" />
+      <File FileName="Assets\UnityFlockController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Flock.cs" Line="1" Column="1" />
+      <File FileName="Assets\Lua\LuaScriptsFromFile.cs" Line="1" Column="1" />
+      <File FileName="Assets\PathTest.cs" Line="1" Column="1" />
+      <File FileName="Assets\VehicleFollowing.cs" Line="26" Column="46" />
+      <File FileName="Assets\Editor\NGUITransformInspector.cs" Line="1" Column="1" />
+      <File FileName="Assets\VehicleAvoidance.cs" Line="42" Column="54" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">

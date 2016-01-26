@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\AssetBundleTool.cs" />
+     <Compile Include="Assets\Editor\NGUITransformInspector.cs" />
      <None Include="Assets\StreamingAssets\041_ScriptsFromFile.lua.txt" />
      <None Include="Assets\uLua\Source\README.txt" />
      <None Include="Assets\uLua\README.txt" />
