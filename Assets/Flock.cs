@@ -50,11 +50,9 @@ public class Flock : MonoBehaviour {
 		float d = 0.0f;
 		foreach (Flock flock in controller.flockList) {
 			if(flock != this){
-				Vector3 relativePos = transform.position - flock.transform.position;
-
-				separation += relativePos / relativePos.sqrMagnitude;
-
-
+				Vector3 relativePos = transformComponent.position - flock.transformComponent.position;
+				Debug.Log ( transformComponent.position + "-" + flock.transformComponent.position);
+				separation += relativePos / relativePos.magnitude;
 			}
 		}
 		Vector3 randomize = new Vector3( Random.Range (-3f, 3f), Random.Range (-3f, 3f), Random.Range (-3f, 3f));
@@ -63,18 +61,18 @@ public class Flock : MonoBehaviour {
 //		Debug.Log ("center = " + center);
 //		Debug.Log ("velocity = " + velocity);
 //		Debug.Log ("follow = " + follow);
-//		Debug.Log ("separation = " + separation);
+
 //		Debug.Log ("randomize = " + randomize);
 		var result = controller.centerWeight * center +
 			controller.velocityWeight * velocity +
 			controller.followWeight * follow +
 			controller.separationWeight * separation +
 			controller.randomizeWeight * randomize;
-//		Debug.Log ("velocity = " + velocity);
-		Debug.DrawLine (transformComponent.position, controller.flockCenter, Color.green);
-		Debug.DrawLine (transformComponent.position, transform.position + separation, Color.red);
-		Debug.DrawLine (transformComponent.position, transformComponent.position + randomize, Color.blue);
-//		Debug.DrawLine (transformComponent.position, transform.position + separation, Color.yellow);
+//		Debug.Log ("result = " + result);
+//		Debug.DrawLine (transformComponent.position,(transformComponent.position+ center * controller.centerWeight), Color.green);
+//		Debug.DrawLine (transformComponent.position, transform.position + follow * controller.followWeight, Color.red);
+//		Debug.DrawLine (transformComponent.position, transformComponent.position + randomize * controller.randomizeWeight, Color.blue);
+//		Debug.DrawLine (transformComponent.position, (transformComponent.position + separation * controller.separationWeight), Color.yellow);
 
 
 		return result;

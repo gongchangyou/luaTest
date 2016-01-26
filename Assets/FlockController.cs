@@ -4,13 +4,13 @@ using System.Collections.Generic;
 public class FlockController : MonoBehaviour {
 	public float minVelocity = 1;
 	public float maxVelocity = 8;
-	public int flockSize = 5;
+	public int flockSize = 2;
 
-	public float centerWeight = 1.0f;
-	public float velocityWeight = 1.0f;
-	public float separationWeight = 1.0f;
-	public float followWeight = 1.0f;
-	public float randomizeWeight = 10.0f;
+	public float centerWeight;
+	public float velocityWeight;
+	public float separationWeight;
+	public float followWeight;
+	public float randomizeWeight;
 
 	public Flock prefab;
 	public Transform target;
