@@ -123,6 +123,37 @@ public class GridManager : MonoBehaviour {
 		leftNodeRow = row;
 		leftNodeColumn = column + 1;
 		AssignNeighbour (leftNodeRow, leftNodeColumn, neighbors);
+
+		//add 4 direction
+		//add obstacle judgement
+
+		leftNodeRow = row - 1;
+		leftNodeColumn = column - 1;
+		if (nodes [leftNodeRow, column].bObstacle || nodes [row, leftNodeColumn].bObstacle) {
+		} else {
+			AssignNeighbour (leftNodeRow, leftNodeColumn, neighbors);
+		}
+
+		leftNodeRow = row - 1;
+		leftNodeColumn = column + 1;
+		if (nodes [leftNodeRow, column].bObstacle || nodes [row, leftNodeColumn].bObstacle) {
+		} else {
+			AssignNeighbour (leftNodeRow, leftNodeColumn, neighbors);
+		}
+		
+		leftNodeRow = row + 1;
+		leftNodeColumn = column - 1;
+		if (nodes [leftNodeRow, column].bObstacle || nodes [row, leftNodeColumn].bObstacle) {
+		} else {
+			AssignNeighbour (leftNodeRow, leftNodeColumn, neighbors);
+		}
+		
+		leftNodeRow = row + 1;
+		leftNodeColumn = column + 1;
+		if (nodes [leftNodeRow, column].bObstacle || nodes [row, leftNodeColumn].bObstacle) {
+		} else {
+			AssignNeighbour (leftNodeRow, leftNodeColumn, neighbors);
+		}
 	
 	}
 
