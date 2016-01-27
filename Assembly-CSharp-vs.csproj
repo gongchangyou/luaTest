@@ -46,16 +46,21 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AStar.cs" />
      <Compile Include="Assets\DiceGame.cs" />
      <Compile Include="Assets\Flock.cs" />
      <Compile Include="Assets\FlockController.cs" />
+     <Compile Include="Assets\GridManager.cs" />
      <Compile Include="Assets\Lua\A.cs" />
      <Compile Include="Assets\Lua\B.cs" />
      <Compile Include="Assets\Lua\DEFINE_TOOL.cs" />
      <Compile Include="Assets\Lua\LuaScriptsFromFile.cs" />
      <Compile Include="Assets\Lua\Singleton.cs" />
+     <Compile Include="Assets\Node.cs" />
      <Compile Include="Assets\PathTest.cs" />
+     <Compile Include="Assets\PriorityQueue.cs" />
      <Compile Include="Assets\SlotMachine.cs" />
+     <Compile Include="Assets\TestCode.cs" />
      <Compile Include="Assets\UnityFlock.cs" />
      <Compile Include="Assets\UnityFlockController.cs" />
      <Compile Include="Assets\VehicleAvoidance.cs" />
