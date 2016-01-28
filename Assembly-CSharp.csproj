@@ -60,6 +60,7 @@
      <Compile Include="Assets\PathTest.cs" />
      <Compile Include="Assets\PriorityQueue.cs" />
      <Compile Include="Assets\SlotMachine.cs" />
+     <Compile Include="Assets\Target.cs" />
      <Compile Include="Assets\TestCode.cs" />
      <Compile Include="Assets\UnityFlock.cs" />
      <Compile Include="Assets\UnityFlockController.cs" />
