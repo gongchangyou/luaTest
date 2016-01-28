@@ -1,17 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AStar.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Target.cs">
     <Files>
       <File FileName="Assets\Lua\LuaScriptsFromFile.cs" Line="1" Column="1" />
       <File FileName="Assets\PathTest.cs" Line="1" Column="1" />
       <File FileName="Assets\VehicleFollowing.cs" Line="1" Column="1" />
       <File FileName="Assets\Editor\NGUITransformInspector.cs" Line="1" Column="1" />
       <File FileName="Assets\VehicleAvoidance.cs" Line="1" Column="1" />
-      <File FileName="Assets\Node.cs" Line="8" Column="2" />
-      <File FileName="Assets\PriorityQueue.cs" Line="11" Column="37" />
-      <File FileName="Assets\GridManager.cs" Line="140" Column="3" />
+      <File FileName="Assets\Node.cs" Line="1" Column="1" />
+      <File FileName="Assets\PriorityQueue.cs" Line="1" Column="1" />
+      <File FileName="Assets\GridManager.cs" Line="1" Column="1" />
       <File FileName="Assets\AStar.cs" Line="41" Column="60" />
-      <File FileName="Assets\TestCode.cs" Line="37" Column="12" />
+      <File FileName="Assets\TestCode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Target.cs" Line="27" Column="65" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
