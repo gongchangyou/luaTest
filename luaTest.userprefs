@@ -1,24 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AStar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GridManager.cs">
     <Files>
-      <File FileName="Assets\FlockController.cs" Line="39" Column="41" />
-      <File FileName="Assets\DiceGame.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\shaders\AreaFan.shader" Line="1" Column="1" />
-      <File FileName="Assets\UnityFlock.cs" Line="1" Column="1" />
-      <File FileName="Assets\SlotMachine.cs" Line="1" Column="1" />
-      <File FileName="Assets\UnityFlockController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Flock.cs" Line="1" Column="1" />
       <File FileName="Assets\Lua\LuaScriptsFromFile.cs" Line="1" Column="1" />
       <File FileName="Assets\PathTest.cs" Line="1" Column="1" />
       <File FileName="Assets\VehicleFollowing.cs" Line="1" Column="1" />
       <File FileName="Assets\Editor\NGUITransformInspector.cs" Line="1" Column="1" />
       <File FileName="Assets\VehicleAvoidance.cs" Line="1" Column="1" />
-      <File FileName="Assets\Node.cs" Line="34" Column="45" />
-      <File FileName="Assets\PriorityQueue.cs" Line="18" Column="15" />
-      <File FileName="Assets\GridManager.cs" Line="14" Column="6" />
-      <File FileName="Assets\AStar.cs" Line="27" Column="43" />
-      <File FileName="Assets\TestCode.cs" Line="39" Column="2" />
+      <File FileName="Assets\Node.cs" Line="32" Column="22" />
+      <File FileName="Assets\PriorityQueue.cs" Line="11" Column="37" />
+      <File FileName="Assets\GridManager.cs" Line="137" Column="25" />
+      <File FileName="Assets\AStar.cs" Line="11" Column="2" />
+      <File FileName="Assets\TestCode.cs" Line="35" Column="92" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">

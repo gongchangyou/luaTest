@@ -34,10 +34,14 @@ public class AStar : MonoBehaviour {
 					float cost = HeuristicEstimateCost(node ,neighbourNode);
 					float totalCost = node.nodeTotalCost + cost; //G
 
-					float neighbourNodeEstCost = HeuristicEstimateCost (neighbourNode, goal);//H
-					neighbourNode.nodeTotalCost = totalCost;
-					neighbourNode.parent = node;
-					neighbourNode.estimateCost = totalCost + neighbourNodeEstCost;
+					if(!openList.Contains(neighbourNode) || (openList.Contains(neighbourNode) && neighbourNode.nodeTotalCost >= totalCost) ){
+						float neighbourNodeEstCost = HeuristicEstimateCost (neighbourNode, goal);//H
+						neighbourNode.nodeTotalCost = totalCost;
+						neighbourNode.parent = node;
+						neighbourNode.estimateCost = totalCost + neighbourNodeEstCost;
+					}else{
+						Debug.Log(neighbourNode.nodeTotalCost + "");
+					}
 
 					if(!openList.Contains(neighbourNode)){
 						openList.Push(neighbourNode);

@@ -126,45 +126,42 @@ public class GridManager : MonoBehaviour {
 
 		//add 4 direction
 		//add obstacle judgement
-
 		leftNodeRow = row - 1;
 		leftNodeColumn = column - 1;
-		if (nodes [leftNodeRow, column].bObstacle || nodes [row, leftNodeColumn].bObstacle) {
-		} else {
-			AssignNeighbour (leftNodeRow, leftNodeColumn, neighbors);
-		}
-
+		AssignCornerNeighbour (row, column, leftNodeRow, leftNodeColumn, neighbors);
+	
 		leftNodeRow = row - 1;
 		leftNodeColumn = column + 1;
-		if (nodes [leftNodeRow, column].bObstacle || nodes [row, leftNodeColumn].bObstacle) {
-		} else {
-			AssignNeighbour (leftNodeRow, leftNodeColumn, neighbors);
-		}
+		AssignCornerNeighbour (row, column, leftNodeRow, leftNodeColumn, neighbors);
 		
 		leftNodeRow = row + 1;
 		leftNodeColumn = column - 1;
-		if (nodes [leftNodeRow, column].bObstacle || nodes [row, leftNodeColumn].bObstacle) {
-		} else {
-			AssignNeighbour (leftNodeRow, leftNodeColumn, neighbors);
-		}
+		AssignCornerNeighbour (row, column, leftNodeRow, leftNodeColumn, neighbors);
 		
 		leftNodeRow = row + 1;
 		leftNodeColumn = column + 1;
-		if (nodes [leftNodeRow, column].bObstacle || nodes [row, leftNodeColumn].bObstacle) {
-		} else {
-			AssignNeighbour (leftNodeRow, leftNodeColumn, neighbors);
-		}
+		AssignCornerNeighbour (row, column, leftNodeRow, leftNodeColumn, neighbors);
 	
 	}
 
 	void AssignNeighbour(int row, int column, ArrayList neighbors){
-		if (row != -1 && column != -1 && row < numOfRows && column < numOfColumns) {
+		if (row > -1 && column > -1 && row < numOfRows && column < numOfColumns) {
 			Node nodeToAdd = nodes[row, column];
 			if(! nodeToAdd.bObstacle){
 				neighbors.Add(nodeToAdd);
 			}
 		}
 	}
+
+	void AssignCornerNeighbour(int row, int column,int leftNodeRow, int leftNodeColumn, ArrayList neighbors){
+		if (row > -1 && column > -1 && row < numOfRows && column < numOfColumns && leftNodeRow > -1 && leftNodeColumn > -1 && leftNodeRow < numOfRows && leftNodeColumn < numOfColumns) {
+			if (nodes [leftNodeRow, column].bObstacle || nodes [row, leftNodeColumn].bObstacle) {
+			} else {
+				AssignNeighbour (leftNodeRow, leftNodeColumn, neighbors);
+			}
+		}
+	}
+	
 
 	void OnDrawGizmos(){
 		if (showGrid) {
